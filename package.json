@@ -1,0 +1,26 @@
+{
+  "dependencies": {
+    "@koa/router": "^12.0.0",
+    "co-body": "^6.1.0",
+    "koa": "^2.14.1"
+  },
+  "name": "koa-cli",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HHG66/koa-cli.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HHG66/koa-cli/issues"
+  },
+  "homepage": "https://github.com/HHG66/koa-cli#readme",
+  "description": ""
+}
