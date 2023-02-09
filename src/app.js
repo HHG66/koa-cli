@@ -1,18 +1,19 @@
 /*
  * @Author: HHG
  * @Date: 2023-02-08 22:13:49
- * @LastEditTime: 2023-02-09 13:02:00
+ * @LastEditTime: 2023-02-10 00:09:31
  * @LastEditors: 韩宏广
- * @FilePath: \koa-web-cli\src\app.js
+ * @FilePath: /koa-cli/src/app.js
  * @文件说明: 
  */
-let Koa = require('koa')
+const Koa = require('koa')
 const app = new Koa();
-let router =require('./controller/index')
- 
 
-app.use(router.routes())
-app.use(router.allowedMethods());
+const InitController = require('./controller/index.js')
+
+InitController.InitCore(app)
+// app.use(router.routes())
+// app.use(router.allowedMethods());
 
 
 
