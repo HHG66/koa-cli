@@ -7,22 +7,3 @@
  * @文件说明: 
  */
 
-const requireDirectory = require('require-directory')
-const Router = require('@koa/router')
-class InitController {
-  static InitCore(app) {
-    InitController.app = app
-    InitController.InitLoadRouters()
-  }
-  static InitLoadRouters() {
-    //这里不能使用@别名
-    const apiDirectory = `${process.cwd()}/src/controller`
-    requireDirectory(module, apiDirectory, { visit: ModuleLoad })
-    function ModuleLoad(obj) {
-      if (obj instanceof Router) {
-        InitController.app.use(obj.routes())
-      }
-    }
-  }
-}
-module.exports = InitController
