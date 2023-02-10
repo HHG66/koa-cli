@@ -1,13 +1,13 @@
 /*
  * @Author: HHG
  * @Date: 2023-02-08 22:13:49
- * @LastEditTime: 2023-02-10 13:03:20
+ * @LastEditTime: 2023-02-10 22:49:32
  * @LastEditors: 韩宏广
- * @FilePath: \koa-web-cli\src\app.js
+ * @FilePath: /koa-cli/src/app.js
  * @文件说明: 
  */
 const Koa = require('koa')
-const  app = new Koa();
+const app = new Koa();
 const bodyParser = require('koa-bodyparser');
 const InitController = require('./router/index.js')
 

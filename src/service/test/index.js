@@ -1,5 +1,4 @@
-
-const app = require('../app.js')
+const app = require('../../app.js')
 module.exports = (ctx, next) => {
   // console.log(ctx,next);
   // console.log( ctx.request.body);
@@ -13,6 +12,9 @@ module.exports = (ctx, next) => {
 }
 app.use((ctx, next) => {
   console.log('自定义中间件');
+  models().then(res => {
+    console.log(res);
+  })
   next()
 });
 app.use((ctx, next) => {
@@ -21,9 +23,7 @@ app.use((ctx, next) => {
 
 const business = (ctx) => {
   console.log('处理业务');
-  models().then(res => {
-    console.log(res);
-  })
+ 
 }
 
 //数据库操作要异步处理

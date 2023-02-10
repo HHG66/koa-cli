@@ -6,7 +6,8 @@ let router = new Router();
 // const index=import( '$components/src/service/index.js')
 // console.log(index);
 // console.log(printMe);
-router.post('/test', (ctx, next) => {
+router.get('/test', (ctx, next) => {
+  console.log('进入路由');
   require('../../../src/controller/test/index')(ctx, next)
 });
 module.exports = router
