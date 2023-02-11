@@ -29,6 +29,7 @@ const business = (ctx) => {
 const models = async () => {
   return new Promise(function (resolve, reject) {
     console.log('调用数据库方法');
+    // require('@/mapper/test/index')()
     require('mapper/test/index')()
     resolve('Promise')
   })
