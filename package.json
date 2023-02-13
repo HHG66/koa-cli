@@ -6,6 +6,8 @@
     "app-module-path": "^2.2.0",
     "koa": "^2.14.1",
     "koa-bodyparser": "^4.3.0",
+    "koa2-cors": "^2.0.6",
+    "log4js": "^6.7.1",
     "mongoose": "^6.9.1",
     "node-polyfill-webpack-plugin": "^2.0.1",
     "require-directory": "^2.1.1"
@@ -16,7 +18,7 @@
   "main": "./src/app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "webpack serve --config webpack.config.js    ",
+    "dev": "nodemon ,/src/app.js",
     "pro": "nodemon ./dist/main.js",
     "build": " webpack  --config webpack.config.js ",
     "serve": "npm-run-all -p dev pro"
