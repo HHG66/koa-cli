@@ -1,0 +1,10 @@
+const {   } = require('@models/<%= path %>/<%= name %>.js')
+
+const { add, findOne, find, updata, del } = require('../index.js')
+
+module.exports = {
+ 
+  newassociatedbill: (data) => {
+    return add(Associatedbill, data)
+  },
+}
